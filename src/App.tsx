@@ -10,6 +10,7 @@ import Keywords from "./pages/Keywords";
 import Colors from "./pages/Colors";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import SkillInsight from "./pages/SkillInsight";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/colors" element={<Colors />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/skill-insight" element={<SkillInsight />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

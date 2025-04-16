@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, TrendingUp, LineChart, Palette, Search } from "lucide-react";
+import { ArrowRight, TrendingUp, LineChart, Palette, Search, Camera } from "lucide-react";
 import { Link } from "react-router-dom";
 import MainLayout from "@/components/MainLayout";
 
@@ -57,7 +57,7 @@ const Index = () => {
               Our platform analyzes market data to provide actionable insights for rural craftspeople
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               { 
                 icon: <TrendingUp className="h-10 w-10 text-terracotta" />,
@@ -76,6 +76,12 @@ const Index = () => {
                 title: "Color Palettes",
                 description: "Find popular color combinations that appeal to today's consumers",
                 link: "/colors"
+              },
+              {
+                icon: <Camera className="h-10 w-10 text-terracotta" />,
+                title: "Skill Insight",
+                description: "Upload craft images to get detailed analysis and creation guidance",
+                link: "/skill-insight"
               }
             ].map((feature, index) => (
               <div 
