@@ -72,17 +72,21 @@ const ImageUploader = ({ onImageUpload, isLoading }: ImageUploaderProps) => {
           <p className="text-muted-foreground text-center mb-4">
             Upload any handmade product image for AI analysis
           </p>
-          <Button as="label" htmlFor="file-upload">
-            Select Image
-            <input
-              id="file-upload"
-              type="file"
-              className="sr-only"
-              accept="image/*"
-              onChange={handleFileChange}
-              disabled={isLoading}
-            />
-          </Button>
+          <div>
+            <Button>
+              <label htmlFor="file-upload" className="cursor-pointer">
+                Select Image
+                <input
+                  id="file-upload"
+                  type="file"
+                  className="sr-only"
+                  accept="image/*"
+                  onChange={handleFileChange}
+                  disabled={isLoading}
+                />
+              </label>
+            </Button>
+          </div>
         </div>
       ) : (
         <div className="relative">
